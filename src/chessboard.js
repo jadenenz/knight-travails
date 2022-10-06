@@ -131,7 +131,7 @@ export class Chessboard {
           const currentPathCoord = [currentPath.posX, currentPath.posY]
           path.push(currentPathCoord)
         }
-        console.log("Your knight has arrived at its destination!", currentNode)
+        // console.log("Your knight has arrived at its destination!", currentNode)
         // console.log("nodePath: ", nodePath)
         console.log("Path: ", path)
         return currentNode
@@ -254,7 +254,7 @@ class BoardPosition {
   predictMove(dir1, dir2) {
     let newPosX = this.posX
     let newPosY = this.posY
-    console.log("newPosX: ", newPosX, "newPosY: ", newPosY)
+    // console.log("newPosX: ", newPosX, "newPosY: ", newPosY)
     if (dir1 === "up") {
       newPosY = newPosY + 2
     } else if (dir1 === "down") {
