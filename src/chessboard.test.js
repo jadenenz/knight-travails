@@ -1,6 +1,6 @@
 import { Chessboard } from "./chessboard"
 
-test("random board space returns X", () => {
+test("given board space returns expected X and Y values", () => {
   const chess = new Chessboard()
   const testVar = chess.getPos(1, 3)
   expect(testVar.posX).toBe(1)
@@ -40,4 +40,14 @@ test("linkBoard links all the positions on the board", () => {
   const linkedNodeRU = chess.getPos(4, 7)
   expect(node.moves.dl).toEqual(linkedNodeDL)
   expect(node.moves.ru).toEqual(linkedNodeRU)
+  console.log(node)
+})
+
+test("knightMoves initial test", () => {
+  const chess = new Chessboard()
+  chess.linkBoard()
+  const start = chess.getPos(1, 5)
+  const end = chess.getPos(2, 2)
+  console.log(start, end)
+  chess.knightMoves(start, end)
 })
